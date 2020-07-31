@@ -11,7 +11,7 @@
 
 import Foundation
 import CoreGraphics
-
+import UIKit
 
 open class BarChartDataSet: BarLineScatterCandleBubbleChartDataSet, IBarChartDataSet
 {
@@ -151,7 +151,13 @@ open class BarChartDataSet: BarLineScatterCandleBubbleChartDataSet, IBarChartDat
     
     /// corners to be rounded
     open var roundedCorners: UIRectCorner = []
+
+    /// An array of bar indicies that will be drawn with vertical labels
+    open var verticalLabelIndicies: [Int] = []
     
+    /// the font for the vertical value-text labels
+    open var verticalLabelValueFont: NSUIFont = NSUIFont.systemFont(ofSize: 7.0)
+
     // MARK: - NSCopying
     
     open override func copy(with zone: NSZone? = nil) -> Any

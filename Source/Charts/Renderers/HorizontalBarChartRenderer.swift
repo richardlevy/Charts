@@ -22,18 +22,10 @@ import Cocoa
 
 open class HorizontalBarChartRenderer: BarChartRenderer
 {
-    private class Buffer
-    {
-        var rects = [CGRect]()
-    }
-    
     public override init(dataProvider: BarChartDataProvider, animator: Animator, viewPortHandler: ViewPortHandler)
     {
         super.init(dataProvider: dataProvider, animator: animator, viewPortHandler: viewPortHandler)
     }
-    
-    // [CGRect] per dataset
-    private var _buffers = [Buffer]()
     
     open override func initBuffers()
     {

@@ -11,6 +11,7 @@
 
 import Foundation
 import CoreGraphics
+import UIKit
 
 @objc
 public protocol IBarChartDataSet: IBarLineScatterCandleBubbleChartDataSet
@@ -42,4 +43,11 @@ public protocol IBarChartDataSet: IBarLineScatterCandleBubbleChartDataSet
     
     /// corners to be rounded
     var roundedCorners: UIRectCorner { get set }
+    
+    /// An array of bar indicies that will be drawn with vertical labels
+    var verticalLabelIndicies : [Int] { get set }
+    
+    /// the font for the vertical value-text labels
+    var verticalLabelValueFont: UIFont { get set }
+
 }
